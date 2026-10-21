@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản lý Sinh viên - Lab 8.1</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f4f4f9; }
+    .container { max-width: 600px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; }
+    form { display: flex; gap: 8px; margin-bottom: 20px; }
+    input, select, button { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+    button { background: #0066cc; color: white; border: none; cursor: pointer; }
+    table { width: 100%; border-collapse: collapse; text-align: left; }
+    th, td { padding: 8px; border-bottom: 1px solid #ddd; }
+    .btn-delete { background: #e53935; padding: 4px 8px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Quản lý Sinh viên</h2>
+    <form id="studentForm">
+      <input type="text" id="nameInput" placeholder="Họ và tên" required />
+      <input type="date" id="dobInput" required />
+      <select id="genderInput" required>
+        <option value="Nam">Nam</option>
+        <option value="Nữ">Nữ</option>
+      </select>
+      <button type="submit">Thêm</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th><th>Tên</th><th>Ngày sinh</th><th>Giới tính</th><th>Thao tác</th>
+        </tr>
+      </thead>
+      <tbody id="studentTableBody"></tbody>
+    </table>
+  </div>
+</body>
+</html>
